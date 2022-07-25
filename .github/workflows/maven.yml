@@ -42,3 +42,5 @@ jobs:
         settings: ./my_settings.xml
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: notify
+      run: echo ${{ steps.get-version.outputs.version }}
